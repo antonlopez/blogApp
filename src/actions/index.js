@@ -56,11 +56,10 @@ export const fetchPost = (id) => {
 
 }
 
-export const fetchPostSuccess = (data)=> {
-  debugger;
+export const fetchPostSuccess = (post)=> {
   return {
     type: FETCH_POST,
-    data
+    post
   }
 
 }

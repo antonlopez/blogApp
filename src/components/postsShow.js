@@ -11,10 +11,17 @@ class PostShow extends Component{
     }
 
     render(){
-      const{post}= this.props || '';
+
+  const {post} = this.props;
+  if(!post){
+    return <div>Loading... </div>
+  }
+
       return(
         <div>
           <h3>{post.title}</h3>
+          <h6>Categories: {post.categories}</h6>
+          <p>{post.content}</p>
 
         </div>
       );
@@ -23,8 +30,7 @@ class PostShow extends Component{
 }
 
 const mapStateToProps = ({posts}, ownProps) => {
- //ownProps === this.props
-
+ //ownProps === this.prop
   return{ post: posts[ownProps.match.params.id]};   // we only receive the post that we want, instead of the list of posts
 
 

@@ -8,7 +8,7 @@ export default (state = {},action)=>{
       return _.mapKeys(action.request, 'id')
 
     case FETCH_POST:
-      return {...state, [action.data.id]: action.data }
+      return {...state, [action.post.id]: action.post }
 
     default:
       return state
