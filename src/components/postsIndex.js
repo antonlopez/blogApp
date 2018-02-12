@@ -52,7 +52,6 @@ const transitionOptions = {
   transitionName: "fade",
   transitionEnterTimeout:500,
   transitionLeaveTimeout: 500
-
 }
 
 const mapStateToProps = state =>{
